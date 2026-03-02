@@ -8,32 +8,25 @@ A minimal, Things 3-inspired task manager for macOS. Lives in your menu bar with
 
 ## Features
 
-- **Menu Bar App** — Always accessible from your menu bar
-- **Quick Capture** (`⌥ Space`) — Spotlight-style floating panel to capture tasks instantly
-- **Smart Lists** — Inbox, Today (Hoje), Later (Depois) with task counts
-- **Categories** — Create custom categories with icons and colors to organize tasks
-- **Main Window** — Full Things 3-style interface with sidebar navigation
-- **Context Menus** — Move tasks between sections, assign categories, delete
-- **Persistence** — SwiftData-backed local storage
+- **Menu Bar App** — Always one click away from your system tray
+- **Quick Capture** (<kbd>⌥</kbd> <kbd>Space</kbd>) — Spotlight-style floating panel to capture tasks instantly
+- **Smart Lists** — Inbox, Today, Later with live task counts
+- **Scheduling** — Set a "When" date and tasks auto-promote to Today when the day arrives
+- **Deadlines** — Due dates with color-coded countdown badges (overdue, today, upcoming)
+- **Categories** — User-created areas with custom SF Symbol icons and colors
+- **Main Window** — Full Things 3-style NavigationSplitView with sidebar
+- **Context Menus** — Move between sections, schedule, assign categories, delete
+- **SwiftData Persistence** — Everything saved locally, no account required
 
-## Screenshots
+## Quick Capture
 
-```
-┌─────────────────────────────────────────────────┐
-│  Simple                                         │
-│ ┌───────────┬───────────────────────────────────┤
-│ │  LISTAS   │  Inbox                        3   │
-│ │  ☐ Inbox  │  ───────────────────────────────  │
-│ │  ☀ Hoje   │  ☐ Comprar leite                  │
-│ │  ☾ Depois │  ☐ Enviar email pro João           │
-│ │           │  ☐ Revisar PR do projeto           │
-│ │  CATEGORIAS                                   │
-│ │  🏠 Casa  │  ── Concluídas ─────────────────  │
-│ │  💼 Work  │  ☑ Fazer café                     │
-│ │           │                                   │
-│ │  + Nova   │  + Nova tarefa...                 │
-│ └───────────┴───────────────────────────────────┘
-```
+The quick capture modal (<kbd>⌥</kbd> <kbd>Space</kbd>) provides:
+
+- Section selection via pills (<kbd>⌘1</kbd> Inbox, <kbd>⌘2</kbd> Today, <kbd>⌘3</kbd> Later)
+- Quick date scheduling (Today, Tomorrow, Next Monday)
+- Deadline shortcuts (Today, Tomorrow, Next Friday)
+- Optional category assignment
+- <kbd>⏎</kbd> to save, <kbd>⎋</kbd> to close
 
 ## Requirements
 
@@ -43,77 +36,72 @@ A minimal, Things 3-inspired task manager for macOS. Lives in your menu bar with
 
 ## Getting Started
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/claudioavgo/simple-task.git
-   cd simple-task
-   ```
+```bash
+git clone https://github.com/claudioavgo/simple-task.git
+cd simple-task
+open Simple/Simple.xcodeproj
+```
 
-2. Open the Xcode project:
-   ```bash
-   open Simple/Simple.xcodeproj
-   ```
-
-3. Build and run (`⌘R`)
+Build and run with <kbd>⌘</kbd> <kbd>R</kbd>.
 
 ## Architecture
 
 ```
-Simple/
-├── App/
-│   ├── SimpleApp.swift          # App entry point, scenes & model container
-│   └── AppDelegate.swift        # Keyboard shortcuts & floating panel
-├── Model/
-│   ├── TodoItem.swift           # Task model (SwiftData)
-│   ├── TodoSection.swift        # Inbox/Today/Later enum
-│   └── Category.swift           # User-created categories (SwiftData)
-├── Views/
-│   ├── MainView.swift           # NavigationSplitView (sidebar + detail)
-│   ├── SidebarView.swift        # Lists & categories sidebar
-│   ├── TaskListView.swift       # Filtered task list with inline add
-│   ├── TaskRowView.swift        # Individual task row with category badge
-│   ├── QuickCaptureView.swift   # ⌥Space quick capture modal
-│   ├── MenuBarView.swift        # Menu bar popover
-│   ├── SectionView.swift        # Section grouping for menu bar
-│   └── NewCategorySheet.swift   # Create category sheet
-├── Utilities/
-│   ├── FloatingPanel.swift      # NSPanel for Spotlight-style UI
-│   └── KeyboardShortcuts+Names.swift
-└── Resources/
-    ├── Assets.xcassets
-    ├── Info.plist
-    └── Simple.entitlements
+Simple/Simple/
+├── App/             Entry point, app delegate, scene configuration
+├── Model/           SwiftData models — TodoItem, Category, TodoSection
+├── Views/           SwiftUI views — main window, sidebar, task list, quick capture
+├── Utilities/       FloatingPanel, keyboard helpers, date formatting, Color+Hex
+└── Resources/       Assets, Info.plist, entitlements
 ```
+
+### Date System
+
+Inspired by Things 3's dual-date approach:
+
+| Field | Purpose | Behavior |
+|-------|---------|----------|
+| `whenDate` | When should I start? | Auto-promotes task to Today when the date arrives |
+| `deadline` | When is it due? | Color-coded badge — red (overdue), orange (today), yellow (soon) |
+
+Tasks without dates stay in their assigned section. The `effectiveSection` computed property handles auto-promotion transparently.
 
 ### Tech Stack
 
-- **SwiftUI** — Declarative UI
-- **SwiftData** — Local persistence
-- **AppKit** — Menu bar integration, floating panels
-- **[KeyboardShortcuts](https://github.com/sindresorhus/KeyboardShortcuts)** — Global hotkey management
+| Layer | Technology |
+|-------|------------|
+| UI | SwiftUI |
+| Persistence | SwiftData |
+| Platform | AppKit (menu bar, floating panels) |
+| Dependencies | [KeyboardShortcuts](https://github.com/sindresorhus/KeyboardShortcuts) |
 
 ## Keyboard Shortcuts
 
 | Shortcut | Action |
 |----------|--------|
-| `⌥ Space` | Quick capture |
-| `⌘1` / `⌘2` / `⌘3` | Select Inbox / Today / Later (in quick capture) |
-| `⏎` | Save task |
-| `⎋` | Close quick capture |
+| <kbd>⌥</kbd> <kbd>Space</kbd> | Open quick capture |
+| <kbd>⌘1</kbd> / <kbd>⌘2</kbd> / <kbd>⌘3</kbd> | Inbox / Today / Later |
+| <kbd>⏎</kbd> | Save task |
+| <kbd>⎋</kbd> | Close quick capture |
+| <kbd>⌘O</kbd> | Open main window (from menu bar) |
+| <kbd>⌘Q</kbd> | Quit |
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on:
 
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+- Branch naming (`feat/`, `fix/`, `refactor/`, ...)
+- Commit messages ([Conventional Commits](https://www.conventionalcommits.org/))
+- Pull request process
+- Code style guidelines
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for a detailed history of changes.
 
 ## License
 
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+MIT License — see [LICENSE](LICENSE) for details.
 
 ## Acknowledgments
 

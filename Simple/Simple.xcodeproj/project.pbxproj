@@ -1,0 +1,442 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000010000000000000001 /* SimpleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000001; };
+		A10000010000000000000002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000002; };
+		A10000010000000000000003 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000003; };
+		A10000010000000000000004 /* TodoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000004; };
+		A10000010000000000000005 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000005; };
+		A10000010000000000000006 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000006; };
+		A10000010000000000000007 /* TaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000007; };
+		A10000010000000000000008 /* QuickCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000008; };
+		A10000010000000000000009 /* FloatingPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000009; };
+		A10000010000000000000010 /* KeyboardShortcuts+Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000010; };
+		A10000010000000000000011 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000011; };
+		A10000010000000000000012 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = A10000030000000000000001; };
+		A10000010000000000000020 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000020; };
+		A10000010000000000000021 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000021; };
+		A10000010000000000000022 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000022; };
+		A10000010000000000000023 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000023; };
+		A10000010000000000000024 /* NewCategorySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000024; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A10000020000000000000001 /* SimpleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleApp.swift; sourceTree = "<group>"; };
+		A10000020000000000000002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A10000020000000000000003 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
+		A10000020000000000000004 /* TodoSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoSection.swift; sourceTree = "<group>"; };
+		A10000020000000000000005 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
+		A10000020000000000000006 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
+		A10000020000000000000007 /* TaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowView.swift; sourceTree = "<group>"; };
+		A10000020000000000000008 /* QuickCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCaptureView.swift; sourceTree = "<group>"; };
+		A10000020000000000000009 /* FloatingPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanel.swift; sourceTree = "<group>"; };
+		A10000020000000000000010 /* KeyboardShortcuts+Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardShortcuts+Names.swift"; sourceTree = "<group>"; };
+		A10000020000000000000011 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A10000020000000000000012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A10000020000000000000013 /* Simple.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Simple.entitlements; sourceTree = "<group>"; };
+		A10000020000000000000020 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		A10000020000000000000021 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		A10000020000000000000022 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		A10000020000000000000023 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
+		A10000020000000000000024 /* NewCategorySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCategorySheet.swift; sourceTree = "<group>"; };
+		A10000020000000000000099 /* Simple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simple.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A10000040000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000010000000000000012 /* KeyboardShortcuts in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A10000050000000000000001 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				A10000050000000000000002 /* Simple */,
+				A10000050000000000000099 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A10000050000000000000099 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A10000020000000000000099 /* Simple.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A10000050000000000000002 /* Simple */ = {
+			isa = PBXGroup;
+			children = (
+				A10000050000000000000003 /* App */,
+				A10000050000000000000004 /* Model */,
+				A10000050000000000000005 /* Views */,
+				A10000050000000000000006 /* Utilities */,
+				A10000050000000000000007 /* Resources */,
+			);
+			path = Simple;
+			sourceTree = "<group>";
+		};
+		A10000050000000000000003 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A10000020000000000000001 /* SimpleApp.swift */,
+				A10000020000000000000002 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A10000050000000000000004 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A10000020000000000000003 /* TodoItem.swift */,
+				A10000020000000000000004 /* TodoSection.swift */,
+				A10000020000000000000020 /* Category.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A10000050000000000000005 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A10000020000000000000005 /* MenuBarView.swift */,
+				A10000020000000000000006 /* SectionView.swift */,
+				A10000020000000000000007 /* TaskRowView.swift */,
+				A10000020000000000000008 /* QuickCaptureView.swift */,
+				A10000020000000000000021 /* MainView.swift */,
+				A10000020000000000000022 /* SidebarView.swift */,
+				A10000020000000000000023 /* TaskListView.swift */,
+				A10000020000000000000024 /* NewCategorySheet.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A10000050000000000000006 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A10000020000000000000009 /* FloatingPanel.swift */,
+				A10000020000000000000010 /* KeyboardShortcuts+Names.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A10000050000000000000007 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A10000020000000000000011 /* Assets.xcassets */,
+				A10000020000000000000012 /* Info.plist */,
+				A10000020000000000000013 /* Simple.entitlements */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A10000060000000000000001 /* Simple */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10000080000000000000003 /* Build configuration list for PBXNativeTarget "Simple" */;
+			buildPhases = (
+				A10000070000000000000001 /* Sources */,
+				A10000040000000000000001 /* Frameworks */,
+				A10000070000000000000002 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Simple;
+			packageProductDependencies = (
+				A10000030000000000000001 /* KeyboardShortcuts */,
+			);
+			productName = Simple;
+			productReference = A10000020000000000000099 /* Simple.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A10000090000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+			};
+			buildConfigurationList = A10000080000000000000001 /* Build configuration list for PBXProject "Simple" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A10000050000000000000001 /* Root */;
+			packageReferences = (
+				A10000030000000000000002 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
+			);
+			productRefGroup = A10000050000000000000099 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A10000060000000000000001 /* Simple */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A10000070000000000000002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000010000000000000011 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A10000070000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000010000000000000001 /* SimpleApp.swift in Sources */,
+				A10000010000000000000002 /* AppDelegate.swift in Sources */,
+				A10000010000000000000003 /* TodoItem.swift in Sources */,
+				A10000010000000000000004 /* TodoSection.swift in Sources */,
+				A10000010000000000000005 /* MenuBarView.swift in Sources */,
+				A10000010000000000000006 /* SectionView.swift in Sources */,
+				A10000010000000000000007 /* TaskRowView.swift in Sources */,
+				A10000010000000000000008 /* QuickCaptureView.swift in Sources */,
+				A10000010000000000000009 /* FloatingPanel.swift in Sources */,
+				A10000010000000000000010 /* KeyboardShortcuts+Names.swift in Sources */,
+				A10000010000000000000020 /* Category.swift in Sources */,
+				A10000010000000000000021 /* MainView.swift in Sources */,
+				A10000010000000000000022 /* SidebarView.swift in Sources */,
+				A10000010000000000000023 /* TaskListView.swift in Sources */,
+				A10000010000000000000024 /* NewCategorySheet.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A10000100000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		A10000100000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		A10000100000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Simple/Resources/Simple.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Simple/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Simple;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.simple.todo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		A10000100000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Simple/Resources/Simple.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Simple/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Simple;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.simple.todo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A10000080000000000000001 /* Build configuration list for PBXProject "Simple" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000100000000000000001 /* Debug */,
+				A10000100000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A10000080000000000000003 /* Build configuration list for PBXNativeTarget "Simple" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000100000000000000003 /* Debug */,
+				A10000100000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A10000030000000000000002 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A10000030000000000000001 /* KeyboardShortcuts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A10000030000000000000002 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
+			productName = KeyboardShortcuts;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A10000090000000000000001 /* Project object */;
+}

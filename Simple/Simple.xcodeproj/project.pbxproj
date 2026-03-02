@@ -24,6 +24,8 @@
 		A10000010000000000000022 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000022; };
 		A10000010000000000000023 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000023; };
 		A10000010000000000000024 /* NewCategorySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000024; };
+		A10000010000000000000025 /* DateFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000025; };
+		A10000010000000000000026 /* KeyboardModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000026; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		A10000020000000000000022 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		A10000020000000000000023 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 		A10000020000000000000024 /* NewCategorySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCategorySheet.swift; sourceTree = "<group>"; };
+		A10000020000000000000025 /* DateFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatting.swift; sourceTree = "<group>"; };
+		A10000020000000000000026 /* KeyboardModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardModifiers.swift; sourceTree = "<group>"; };
 		A10000020000000000000099 /* Simple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -127,6 +131,8 @@
 			children = (
 				A10000020000000000000009 /* FloatingPanel.swift */,
 				A10000020000000000000010 /* KeyboardShortcuts+Names.swift */,
+				A10000020000000000000025 /* DateFormatting.swift */,
+				A10000020000000000000026 /* KeyboardModifiers.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -226,6 +232,8 @@
 				A10000010000000000000022 /* SidebarView.swift in Sources */,
 				A10000010000000000000023 /* TaskListView.swift in Sources */,
 				A10000010000000000000024 /* NewCategorySheet.swift in Sources */,
+				A10000010000000000000025 /* DateFormatting.swift in Sources */,
+				A10000010000000000000026 /* KeyboardModifiers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

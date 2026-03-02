@@ -1,14 +1,15 @@
 import SwiftUI
 import SwiftData
 
+/// Compact menu bar popover with quick add and summary.
 struct MenuBarView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.openWindow) private var openWindow
-    @State private var newTaskTitle = ""
     @Query private var allItems: [TodoItem]
+    @State private var newTaskTitle = ""
 
     private var todayCount: Int {
-        allItems.filter { $0.section == .hoje && !$0.isDone }.count
+        allItems.filter { $0.effectiveSection == .today && !$0.isDone }.count
     }
 
     var body: some View {
@@ -19,7 +20,7 @@ struct MenuBarView: View {
                 NSApp.activate()
             } label: {
                 HStack {
-                    Label("Abrir Simple", systemImage: "macwindow")
+                    Label("Open Simple", systemImage: "macwindow")
                     Spacer()
                     Text("⌘O")
                         .font(.caption)
@@ -33,15 +34,14 @@ struct MenuBarView: View {
 
             Divider()
 
-            // Inline add field
+            // Inline add
             HStack(spacing: 8) {
                 Image(systemName: "plus.circle.fill")
                     .foregroundStyle(.blue)
                     .font(.system(size: 16))
-
-                TextField("Nova tarefa no Inbox...", text: $newTaskTitle)
+                TextField("New task in Inbox...", text: $newTaskTitle)
                     .textFieldStyle(.plain)
-                    .onSubmit { addTask() }
+                    .onSubmit(addTask)
             }
             .padding(12)
 
@@ -49,15 +49,11 @@ struct MenuBarView: View {
 
             // Summary
             HStack {
-                if todayCount > 0 {
-                    Text("\(todayCount) tarefa\(todayCount == 1 ? "" : "s") hoje")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                } else {
-                    Text("Nenhuma tarefa para hoje")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                }
+                Text(todayCount > 0
+                     ? "\(todayCount) task\(todayCount == 1 ? "" : "s") today"
+                     : "No tasks for today")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
                 Spacer()
             }
             .padding(.horizontal, 12)
@@ -65,16 +61,15 @@ struct MenuBarView: View {
 
             Divider()
 
-            // Footer
+            // Quit
             HStack {
-                Button("Sair") {
+                Button("Quit") {
                     NSApplication.shared.terminate(nil)
                 }
                 .keyboardShortcut("q")
                 .buttonStyle(.plain)
                 .foregroundStyle(.secondary)
                 .font(.caption)
-
                 Spacer()
             }
             .padding(.horizontal, 12)

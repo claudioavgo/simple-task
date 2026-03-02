@@ -1,6 +1,7 @@
 import Foundation
 import SwiftData
 
+/// User-created grouping for tasks, inspired by Things 3 "Areas".
 @Model
 final class Category {
     @Attribute(.unique) var name: String
@@ -15,6 +16,6 @@ final class Category {
         self.name = name
         self.icon = icon
         self.colorHex = colorHex
-        self.createdAt = Date()
+        self.createdAt = .now
     }
 }

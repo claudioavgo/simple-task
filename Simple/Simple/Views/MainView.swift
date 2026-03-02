@@ -1,11 +1,7 @@
 import SwiftUI
 import SwiftData
 
-enum SidebarItem: Hashable {
-    case section(TodoSection)
-    case category(PersistentIdentifier)
-}
-
+/// Root view for the main window: sidebar + task list detail.
 struct MainView: View {
     @State private var selection: SidebarItem? = .section(.inbox)
     @State private var showNewCategory = false
